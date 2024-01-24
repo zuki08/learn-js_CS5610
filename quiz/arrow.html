@@ -19,7 +19,8 @@
         window.addEventListener('load', function() {
             obj.hello();
         });
-        document.getElementById('btn').addEventListener('click', function() {
+        document.getElementById('btn').addEventListener('click', () => {
+            alert(this) // this is still [object window] as it inherits.
             obj.hello();
         });
     </script>
